@@ -12,5 +12,5 @@ variable "bucket_name" {
 variable "environment" {
   description = "Environment tag for the S3 bucket"
   type        = string
-  default     = "dev"
+  default     = "dev1"
 }

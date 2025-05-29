@@ -9,9 +9,14 @@ resource "aws_servicecatalog_portfolio" "s3_portfolio" {
 }
 
 resource "aws_servicecatalog_product" "s3_product" {
-  name         = "S3 Bucket Product"
-  owner        = "YourName"
-  product_type = "CLOUD_FORMATION_TEMPLATE"
+  name        = "S3 Bucket Product"
+  owner       = "YourName"
+  description = "S3 bucket provisioning product"
+  distributor = "YourCompany"
+  support_description = "Contact support@example.com"
+  support_email       = "support@example.com"
+  support_url         = "https://example.com/support"
+  type        = "CLOUD_FORMATION_TEMPLATE"
 
   provisioning_artifact_parameters {
     name         = "v1"
@@ -63,6 +68,6 @@ resource "aws_servicecatalog_tag_option_resource_association" "tag_association" 
 
 resource "aws_servicecatalog_principal_portfolio_association" "user_access" {
   portfolio_id   = aws_servicecatalog_portfolio.s3_portfolio.id
-  principal_arn  = "arn:aws:iam::ACCOUNT_ID:user/YourUser"
+  principal_arn  = "arn:aws:iam::144317819575:user/cataloguser"
   principal_type = "IAM"
 }
