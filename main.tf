@@ -25,7 +25,7 @@ resource "aws_servicecatalog_product" "s3_product" {
   }
 }
 
-resource "aws_servicecatalog_portfolio_product_association" "association" {
+resource "aws_servicecatalog_product_portfolio_association" "association" {
   portfolio_id = aws_servicecatalog_portfolio.s3_portfolio.id
   product_id   = aws_servicecatalog_product.s3_product.id
 }
