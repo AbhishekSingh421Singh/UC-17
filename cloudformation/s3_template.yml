@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: S3 Bucket Template
+
+Parameters:
+  BucketName:
+    Type: String
+  Environment:
+    Type: String
+    AllowedValues:
+      - dev1
+
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+      Tags:
+        - Key: env1
+          Value: !Ref Environment

@@ -1,19 +1,16 @@
-
-variable "template_url" {
-  description = "URL of the CloudFormation template"
+variable "aws_region" {
+  description = "AWS region"
   type        = string
-  default = "https://demobucketforservicecatalog.s3.us-east-1.amazonaws.com/todaydemo/bucket-old.yaml"
+  default     = "us-east-1"
 }
 
-variable "launch_role_arn" {
-  description = "ARN of the IAM role for launching the product"
+variable "bucket_name" {
+  description = "Name of the S3 bucket"
   type        = string
-  default = "arn:aws:iam::676206899900:role/servicecatalogaccesss"
 }
 
-variable "user_arn" {
-  description = "ARN of the IAM user for accessing the portfolio"
+variable "environment" {
+  description = "Environment tag for the S3 bucket"
   type        = string
-  default = "arn:aws:iam::676206899900:user/svc"
-
+  default     = "dev"
 }
