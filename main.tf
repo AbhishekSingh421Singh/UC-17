@@ -21,7 +21,7 @@ resource "aws_servicecatalog_product" "s3_product" {
   provisioning_artifact_parameters {
     name         = "v1"
     type         = "CLOUD_FORMATION_TEMPLATE"
-    template_url = "https://s3.amazonaws.com/service-catlog-bucket/s3_template.yml"
+    template_url = "https://us-east-1.console.aws.amazon.com/s3/buckets/service-catlog-bucket?region=us-east-1&bucketType=general/s3_template.yml"
   }
 }
 
