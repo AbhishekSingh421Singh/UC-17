@@ -2,7 +2,7 @@
 variable "template_url" {
   description = "URL of the CloudFormation template"
   type        = string
-  default = "https://us-east-1.console.aws.amazon.com/s3/object/service-catlog-bucket?region=us-east-1&bucketType=general&prefix=s2_template.yml"
+  default = "https://service-catlog-bucket.s3.us-east-1.amazonaws.com/s2_template.yml"
 }
 
 variable "launch_role_arn" {
